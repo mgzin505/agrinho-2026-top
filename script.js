@@ -1,26 +1,37 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const contactForm = document.getElementById('contactForm');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(event) {
-            // Evita que a página recarregue
-            event.preventDefault();
+const botao = document.getElementById("btnMensagem");
 
-            // Pega o nome digitado para personalizar a mensagem
-            const nomeInput = document.getElementById('nome').value;
-            const statusDiv = document.getElementById('formStatus');
+botao.addEventListener("click", () => {
 
-            // Simula o envio
-            statusDiv.style.color = '#2E7D32'; // Cor verde
-            statusDiv.innerHTML = `Obrigado, ${nomeInput}! Sua mensagem foi enviada com sucesso para a equipe Agrinho 2026. 🌱`;
+  alert("🌱 Bem-vindo ao projeto Agrinho 2026!");
 
-            // Limpa o formulário
-            contactForm.reset();
+});
 
-            // Apaga a mensagem depois de 5 segundos
-            setTimeout(() => {
-                statusDiv.innerHTML = '';
-            }, 5000);
-        });
+
+// efeito aparecendo ao rolar
+
+const cards = document.querySelectorAll(".card");
+
+window.addEventListener("scroll", () => {
+
+  cards.forEach(card => {
+
+    const posicao = card.getBoundingClientRect().top;
+
+    if(posicao < window.innerHeight - 100){
+
+      card.style.opacity = "1";
+      card.style.transform = "translateY(0)";
+
     }
+
+  });
+
+});
+
+cards.forEach(card => {
+
+  card.style.opacity = "0";
+  card.style.transform = "translateY(50px)";
+  card.style.transition = "0.6s";
+
 });
