@@ -1,56 +1,59 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato - Agrinho 2026</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato | Agrinho 2026</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="navbar">
-        <div class="container">
-            <h1 class="logo">🌱 Agrinho <span>2026</span></h1>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="contato.html" class="active">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <section class="contact-section container">
-        <div class="contact-box">
-            <h2>Fale Conosco</h2>
-            <p>Tem dúvidas sobre as inscrições ou os projetos deste ano? Envie uma mensagem!</p>
-            
-            <form id="contactForm">
-                <div class="input-group">
-                    <label for="nome">Nome Completo</label>
-                    <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
-                </div>
-                
-                <div class="input-group">
-                    <label for="escola">Escola / Instituição</label>
-                    <input type="text" id="escola" name="escola" placeholder="Nome da sua escola" required>
-                </div>
+  <header>
+    <nav>
+      <h1>Agrinho<span>2026</span></h1>
 
-                <div class="input-group">
-                    <label for="mensagem">Mensagem</label>
-                    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Como podemos ajudar?" required></textarea>
-                </div>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
 
-                <button type="submit" class="btn btn-submit">Enviar Mensagem</button>
-            </form>
-            <div id="formStatus" class="status-message"></div>
-        </div>
-    </section>
+  <section class="pagina-contato">
 
-    <footer>
-        <p>&copy; 2026 Projeto Agrinho. Todos os direitos reservados.</p>
-    </footer>
+    <div class="caixa-contato">
 
-    <script src="script.js"></script>
+      <h2>Entre em Contato 🌱</h2>
+
+      <p>
+        Envie sua mensagem sobre o projeto Agrinho 2026.
+      </p>
+
+      <form id="formContato">
+
+        <input type="text" id="nome" placeholder="Seu Nome" required>
+
+        <input type="email" id="email" placeholder="Seu Email" required>
+
+        <textarea id="mensagem" placeholder="Digite sua mensagem..." required></textarea>
+
+        <button type="submit">Enviar Mensagem</button>
+
+      </form>
+
+      <div id="resposta"></div>
+
+    </div>
+
+  </section>
+
+  <script src="script.js"></script>
+
 </body>
 </html>
